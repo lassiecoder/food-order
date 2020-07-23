@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+	height: 100vh;
+  background-image: url(https://images.pexels.com/photos/1603899/pexels-photo-1603899.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 4vw;
+  padding: 5vw;
+}
+
+.heading { 
+  display: flex; 
+  text-align: center;
+  color: #eac30e;
+  padding: 0 4vw;
+  font-family: 'Satisfy', cursive;
+  font-size: 3vw;
+} 
+
+.heading:before, 
+.heading:after { 
+  content: ""; 
+  flex: 1 1; 
+  border-bottom: 2px solid #eac30e; 
+  margin: auto; 
+}
+
+.foodItem {
+  background-color: rgba(0, 0, 0, 0.473);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+}
+
+.foodItem:hover {
+  box-shadow: 0 0 8px black;
+}
+
+.foodDetails {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+}
+#foodName {
+  margin: 0;
+}
+
+#foodName, #price, .billingHeading{
+  font-family: 'Merriweather', serif;
+  color: #eac30e;
+  font-size: 1.2vw;
+  font-weight: 100;
+  padding: 1vw;
+  word-spacing: 0.5vw;
+  transition: 0.5s;
+}
+
+#foodName:hover, #price:hover {
+  color: #eac20ebb;
+}
+
+#button {
+  margin: auto;
+}
+
+#btn {
+  background-color: #eac30e;
+  padding: 0.2vw 1vw;
+  border: none;
+  font-size: 1vw;
+  transition: 0.5s;
+  border-radius: 5%;
+}
+
+#btn:focus {
+  outline: none;
+}
+
+#btn:hover {
+  box-shadow: 0 0 10px #eac30e;
+  font-weight: 700;
+}
+
+/* ===============  PAYMENT BILL  ================ */
+
+.bill {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.808);
+  height: fit-content;
+}
+.bill:hover {
+  box-shadow: 0 0 8px black;
+  transition: 0.5s;
+}
+
+.billingData  span {
+  display: inline-flex;
+}
+
+.billingData > span:first-of-type {
+  width: 50%;
+}
+.billingData > span {
+  width: 25%;
+}
+
+.data {
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-size: 1vw;
+  font-weight: 100;
+  padding: 1vw;
+  transition: 0.5s;
+  word-spacing: 0.5vw;
+}
+
+#grandTotal {
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-size: 1.6vw;
+  font-weight: 100;
+  padding: 1vw;
+  transition: 0.5s;
+  background-color: #eac20e33;
+}
+
+.data:hover, #grandTotal:hover {
+  color: rgba(255, 255, 255, 0.582);
+}
+
+/* ====================    MEDIA QUERIES   ================== */
+
+@media(max-width: 678px) {
+
+  .wrapper {
+    display: block;
+    padding: 0;
+    width: 95%;
+    margin: auto;
+  }
+  .foodItem, .bill {
+    margin: 8vw 1vw;
+  }
+  .heading { 
+    padding: 4vw;
+    font-size: 5vw;
+  }
+  #foodName, #price, .billingHeading, #btn, .data {
+    font-size: 2vw;
+  }
+  .foodDetails {
+    margin: 2vw;
+  }
+  #grandTotal {
+    font-size: 2.2vw;
+  }
+}
+
+@media(max-width: 426px) {
+  .heading { 
+    font-size: 5vw;
+  }
+  #foodName, #price, .billingHeading, #btn{
+    font-size: 3vw;
+  }
+  .data {
+    font-size: 2.8vw;
+  }
+  #grandTotal {
+    font-size: 4vw;
+  }
+  .data {
+    padding: 1.5vw;
+  }
+}
